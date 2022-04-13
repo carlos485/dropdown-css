@@ -24,6 +24,7 @@ body {
   justify-content: space-between;
   transition: height 0.5s, width 0.5s;
   transition-delay: 0s, 0.75s;
+  overflow: hidden;
 }
 
 .navigation.active {
@@ -38,7 +39,22 @@ body {
   width: 60px;
   height: 60px;
   background-color: #FFF;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.navigation.active .userBx {
+  width: calc(100% - 60px);
+  transition-delay: 0s;
+}
+
+.navigation .userBx .username {
+  white-space: nowrap;
+  color: #555;
+  font-size: 1.1em;
 }
 
 .navigation .userBx .imgBx {
@@ -98,4 +114,35 @@ body {
 
 .navigation.active .menuToggle::after {
   transform: translateY(0px) rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 1em;
+  text-decoration: none;
+  color: #555;
+}
+
+.menu li a:hover {
+  color: #4E65FF;
+}
+
+.menu li a ion-icon {
+  font-size: 1.5em;
 }
