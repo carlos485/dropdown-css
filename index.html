@@ -13,8 +13,16 @@
       <div class="imgBx">
         <img src="avatar.jpg" />
       </div>
+      <p class="username">Carlos Pando</p>
     </div>
     <div class="menuToggle"></div>
   </div>
 </body>
 </html>
+<script>
+  let menuToggle = document.querySelector('.menuToggle');
+  let navigation = document.querySelector('.navigation');
+  menuToggle.onclick = function() {
+    navigation.classList.toggle('active')
+  }
+</script>
